@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button id="create-news-btn">Create News</button>
+      <!-- Create News Modal -->
+      <div id="create-news-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-create-modal-btn" class="close">&times;</span>
+          <h2>Create News</h2>
+          <form id="create-news-form">
+            <input
+              type="text"
+              id="create-author"
+              placeholder="Author"
+              required
+            />
+            <input type="text" id="create-title" placeholder="Title" required />
+            <input type="text" id="create-url" placeholder="URL" required />
+            <input
+              type="text"
+              id="create-avatar"
+              placeholder="Avatar URL"
+              required
+            />
+            <button type="submit">Create News</button>
+          </form>
+        </div>
+      </div>
+
+      <h1>Latest News</h1>
+      <div id="news-list"></div>
+      <div id="pagination-controls">
+        <button id="prev-page" disabled>Previous</button>
+        <span id="page-info"></span>
+        <button id="next-page">Next</button>
+      </div>
+    </div>
+
+    <script src="modules/api.js"></script>
+    <script src="modules/news.js"></script>
+    <script src="modules/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Details</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="image-slider" class="slider-container">
+        <button id="prev-slide" class="slider-button">&lt;</button>
+        <div class="slider">
+        </div>
+        <button id="next-slide" class="slider-button">&gt;</button>
+      </div>
+      
+      <h1 id="news-title"></h1>
+      <div id="image-slider" class="slider"></div>
+      <p id="news-content"></p>
+      <button id="edit-news-btn">Edit News</button>
+
+      <ul id="comments-list"></ul>
+      <form id="comment-form">
+        <input type="hidden" id="comment-id" />
+        <input type="text" id="new-name" placeholder="Full name" required />
+        <textarea id="new-comment" placeholder="Comment..." required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+
+      <div id="update-news-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-update-modal-btn" class="close">&times;</span>
+          <h2>Edit News</h2>
+          <form id="update-news-form">
+            <input type="text" id="update-title" placeholder="Title" required />
+            <input type="text" id="update-url" placeholder="URL" required />
+            <input
+              type="text"
+              id="update-avatar"
+              placeholder="Avatar URL"
+              required
+            />
+            <textarea id="update-image-urls" placeholder="Enter image URLs separated by commas"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="modules/api.js"></script>
+    <script src="modules/index.js"></script>
+    <script src="modules/imageSlider.js"></script>
+    <script src="modules/comment.js"></script>
+    <script src="modules/news.js"></script>
+  </body>
+</html>
